@@ -275,82 +275,29 @@ footer button{text-decoration:underline;color:var(--gold-300)}
 }
 </style>
 
-    <!--
-      Meta Pixel for abou-sandia.vercel.app
-      Pixel ID: 1841287127164615 (the Pixel already linked to your RunItUp23k ad)
-
-      STEP 1: Paste the BASE CODE inside <head> on EVERY page of the site.
-      STEP 2: Add the EVENT lines at the matching moments (see below).
-      STEP 3: Redeploy on Vercel, then test it (see the bottom of this file).
-    -->
-
-    <!-- ===================== STEP 1: BASE CODE (in <head>) ===================== -->
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1841287127164615');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1841287127164615&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-
-    <!-- ===================== STEP 2: EVENTS ===================== -->
-    <script>
-      // A) When the product / pack page loads (put this on the product page):
-      fbq('track', 'ViewContent', {
-        content_name: 'Pack Rihan Royal - 9 produits',
-        content_type: 'product',
-        value: 1500,
-        currency: 'MAD'
-      });
-
-      // B) When the visitor clicks "Order" / "اطلب الآن", or opens the order form:
-      //    (attach to the button's click handler)
-      function trackStartOrder() {
-        fbq('track', 'InitiateCheckout', { value: 1500, currency: 'MAD' });
-      }
-
-      // C) When the cash-on-delivery order form is SUBMITTED SUCCESSFULLY
-      //    (in the success callback, or on the thank-you page). This is the one
-      //    the campaign optimizes for, so fire it once per real order only.
-      function trackOrderPlaced(orderTotalMAD, orderId) {
-        fbq('track', 'Purchase',
-          { value: orderTotalMAD || 1500, currency: 'MAD' },
-          { eventID: orderId }   // optional: avoids double counting later with CAPI
-        );
-      }
-    </script>
-
-  <!--
-    If the site is Next.js (common on Vercel):
-    - App Router: put the base code in app/layout.tsx with
-      <Script id="meta-pixel" strategy="afterInteractive">...</Script>
-      (from 'next/script'), and the <noscript> img inside <body>.
-    - Call window.fbq('track', 'Purchase', ...) inside the form's onSubmit success handler.
-    - Single-page navigation does not reload the page, so on route change call
-      window.fbq('track', 'PageView').
-
-    ===================== STEP 3: TEST =====================
-    1. Redeploy on Vercel.
-    2. Install the "Meta Pixel Helper" Chrome extension and open abou-sandia.vercel.app.
-      It should show PageView (and ViewContent on the product page) with no errors.
-    3. In Events Manager -> Pixel 1841287127164615 -> "Test events", place one
-      test order. You should see InitiateCheckout and Purchase arrive.
-    4. Tell Claude "pixel is live": it will confirm the events from the Meta side
-      and fix the ad set so the campaign can publish.
-  -->
-
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1841287127164615');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'Pack Rihan Royal - 9 produits',
+  content_type: 'product',
+  value: 1500,
+  currency: 'MAD'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1841287127164615&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -691,9 +638,27 @@ form.addEventListener('submit',e=>{
   const text='طلب جديد: باك الريحان الملكي (1500 درهم)\nالاسم: '+f.name.value.trim()+'\nالمدينة / العنوان: '+f.city.value.trim()+'\nالهاتف: '+f.phone.value.trim()+'\nالدفع عند الاستلام';
   document.getElementById('summary').textContent=text;
   document.getElementById('waLink').href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text);
+  orderId='order-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
+  purchaseTracked=false;
   grid.classList.add('ordered');
 });
 document.getElementById('editOrder').addEventListener('click',()=>grid.classList.remove('ordered'));
+
+/* ============ META PIXEL EVENTS ============ */
+const track_=(...a)=>{ if(typeof window.fbq==='function') window.fbq(...a); };
+let checkoutTracked=false, purchaseTracked=false, orderId=null;
+const trackStartOrder=()=>{
+  if(checkoutTracked) return;
+  checkoutTracked=true;
+  track_('track','InitiateCheckout',{value:1500,currency:'MAD'});
+};
+document.querySelectorAll('a[href="#order"]').forEach(a=>a.addEventListener('click',trackStartOrder));
+Object.values(f).forEach(i=>i.addEventListener('focus',trackStartOrder,{once:true}));
+document.getElementById('waLink').addEventListener('click',()=>{
+  if(purchaseTracked||!orderId) return;
+  purchaseTracked=true;
+  track_('track','Purchase',{value:1500,currency:'MAD'},{eventID:orderId});
+});
 
 /* ============ PRODUCT SLIDER ============ */
 const track=document.getElementById('track'), frames=[...track.children], thumbs=[...document.getElementById('thumbs').children];
