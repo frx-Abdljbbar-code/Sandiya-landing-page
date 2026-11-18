@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>باك الريحان الملكي | Sandya Elegance</title>
+<meta name="description" content="باك الريحان الملكي من Sandya Elegance: 9 منتجات طبيعية فاخرة للعناية، التوصيل لجميع مدن المغرب والدفع عند الاستلام.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --green-950:#061b14; --green-900:#0a2a1f; --green-800:#0f3a2b; --green-700:#16503c;
+  --gold-300:#f6e7a6; --gold-400:#ecc965; --gold-500:#d4a437; --gold-700:#9a7420;
+  --cream:#f5ecd9; --cream-dim:#cfc6b0; --line:rgba(236,201,101,.28);
+  --gold-grad:linear-gradient(120deg,#d4a437 0%,#f6e7a6 38%,#ecc965 60%,#b98a26 100%);
+  --f-display:"Amiri",serif; --f-body:"Tajawal",sans-serif; --f-latin:"Cormorant Garamond",serif;
+  --pad:clamp(20px,5vw,88px); --bar-h:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity;background:var(--green-950)}
+body{font-family:var(--f-body);color:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--gold-300);outline-offset:3px;border-radius:6px}
+
+/* ============ SLIDES ============ */
+.slide{position:relative;min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(72px,9vh,110px) var(--pad) calc(var(--bar-h) + clamp(28px,5vh,56px));overflow:hidden;isolation:isolate}
+.slide::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:radial-gradient(90% 70% at 85% 10%,rgba(236,201,101,.13),transparent 60%),linear-gradient(160deg,var(--green-900),var(--green-950) 70%)}
+.slide.alt::before{background:radial-gradient(80% 60% at 10% 90%,rgba(236,201,101,.12),transparent 60%),linear-gradient(200deg,var(--green-800),var(--green-950) 75%)}
+/* zellige lattice */
+.slide::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.07;pointer-events:none;
+  background-image:linear-gradient(45deg,var(--gold-400) 1px,transparent 1px),linear-gradient(-45deg,var(--gold-400) 1px,transparent 1px);
+  background-size:46px 46px;mask-image:radial-gradient(ellipse at center,transparent 30%,#000 100%);-webkit-mask-image:radial-gradient(ellipse at center,transparent 30%,#000 100%)}
+.wrap{width:100%;max-width:1240px;margin-inline:auto}
+
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:clamp(13px,1.1vw,16px);font-weight:500;letter-spacing:.04em;color:var(--gold-400)}
+.eyebrow::before{content:"✦";font-size:.9em}
+h1,h2{font-family:var(--f-display);font-weight:700;line-height:1.25}
+.gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(30px,4.2vw,58px);margin-top:8px}
+.head{margin-bottom:clamp(22px,4vh,44px)}
+.head.center{text-align:center}
+.latin{font-family:var(--f-latin);letter-spacing:.02em}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0) * 90ms)}
+.slide.visible .reveal{opacity:1;transform:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 30px;border-radius:999px;font-weight:700;font-size:clamp(15px,1.2vw,18px);transition:transform .25s,box-shadow .25s,background .25s}
+.btn-gold{background:var(--gold-grad);color:#1c1503;box-shadow:0 10px 30px -10px rgba(236,201,101,.6)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(236,201,101,.75)}
+.btn-ghost{border:1px solid var(--line);color:var(--gold-300)}
+.btn-ghost:hover{background:rgba(236,201,101,.08)}
+
+/* ============ TOP BAR / NAV ============ */
+.top{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:12px var(--pad);
+  background:linear-gradient(to bottom,rgba(6,27,20,.92),rgba(6,27,20,0))}
+.top img{height:46px;width:auto}
+.top a.mini{font-size:14px;font-weight:700;color:var(--gold-300);border:1px solid var(--line);border-radius:999px;padding:8px 18px;background:rgba(6,27,20,.5);backdrop-filter:blur(6px)}
+.progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:40;background:var(--gold-grad);transform-origin:right;transform:scaleX(0)}
+.dots{position:fixed;inset-inline-end:18px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;gap:6px}
+.dots button{width:24px;height:24px;display:grid;place-items:center}
+.dots button::before{content:"";width:8px;height:8px;border-radius:50%;border:1px solid var(--gold-400);transition:.3s}
+.dots button[aria-current="true"]::before{background:var(--gold-400);transform:scale(1.5)}
+
+/* ============ 1 HERO ============ */
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,80px);align-items:center}
+.hero h1{font-size:clamp(44px,7vw,104px);line-height:1.15;margin:10px 0 18px}
+.hero p.sub{font-size:clamp(17px,1.5vw,22px);color:var(--cream)}
+.hero p.sub2{font-family:var(--f-display);font-size:clamp(18px,1.6vw,24px);color:var(--gold-300);margin-top:6px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(22px,4vh,38px)}
+.note{margin-top:16px;font-size:14px;color:var(--cream-dim)}
+.arch{position:relative;justify-self:center;width:min(100%,520px);aspect-ratio:4/5;border-radius:999px 999px 18px 18px;padding:10px;border:1px solid var(--line)}
+.arch::before{content:"";position:absolute;inset:-14px;border-radius:999px 999px 26px 26px;border:1px solid rgba(236,201,101,.12)}
+.arch img{width:100%;height:100%;object-fit:cover;border-radius:999px 999px 10px 10px}
+.seal{position:absolute;inset-block-end:22px;inset-inline-start:-18px;width:112px;height:112px;border-radius:50%;background:var(--gold-grad);color:#1c1503;display:grid;place-content:center;text-align:center;font-weight:700;line-height:1.15;box-shadow:0 12px 30px -8px rgba(0,0,0,.6);transform:rotate(-8deg)}
+.seal b{font-family:var(--f-display);font-size:40px;line-height:1}
+.seal span{font-size:13px}
+
+/* ============ 2 PRODUCTS ============ */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,18px)}
+.card{position:relative;display:flex;gap:16px;align-items:flex-start;padding:clamp(14px,1.6vw,22px);border:1px solid var(--line);border-radius:16px;background:linear-gradient(150deg,rgba(22,80,60,.55),rgba(10,42,31,.4));transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold-400)}
+.card .n{font-family:var(--f-latin);font-size:clamp(30px,2.6vw,42px);font-weight:600;line-height:1;min-width:1.5em}
+.card h3{font-family:var(--f-display);font-size:clamp(18px,1.5vw,23px);line-height:1.35;color:var(--cream)}
+.card p{font-size:clamp(14px,1.05vw,16px);color:var(--cream-dim);line-height:1.55;margin-top:2px}
+.swipe-hint{display:none}
+
+/* ============ PRODUCT SLIDER ============ */
+.slider{position:relative;max-width:1080px;margin-inline:auto}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:24px;border:1px solid var(--line);background:linear-gradient(150deg,rgba(22,80,60,.5),rgba(6,27,20,.6))}
+.track::-webkit-scrollbar{display:none}
+.frame{flex:0 0 100%;scroll-snap-align:center;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,56px);align-items:center;padding:clamp(14px,2vw,24px)}
+.shot{height:min(46svh,440px);aspect-ratio:1;border-radius:16px;overflow:hidden;background:var(--green-900)}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot.wide img{object-fit:contain}
+.info{padding-inline-end:clamp(8px,3vw,48px)}
+.info .count{font-size:clamp(22px,2vw,30px);font-weight:600;letter-spacing:.06em}
+.info h3{font-family:var(--f-display);font-size:clamp(26px,3vw,44px);line-height:1.3;color:var(--cream);margin-top:4px}
+.info .tagline{font-family:var(--f-display);font-size:clamp(18px,1.6vw,23px);color:var(--gold-300);margin:6px 0 10px}
+.info p{font-size:clamp(15px,1.25vw,18px);color:var(--cream-dim)}
+.arrow{position:absolute;top:50%;z-index:2;width:52px;height:52px;margin-top:-26px;border-radius:50%;background:var(--gold-grad);box-shadow:0 10px 24px -8px rgba(0,0,0,.7);display:grid;place-items:center;transition:transform .2s,opacity .2s}
+.arrow::before{content:"";width:11px;height:11px;border-top:2.5px solid #1c1503;border-left:2.5px solid #1c1503}
+.arrow.prev{inset-inline-start:-26px}.arrow.prev::before{transform:rotate(135deg);margin-inline-end:5px}
+.arrow.next{inset-inline-end:-26px}.arrow.next::before{transform:rotate(-45deg);margin-inline-start:5px}
+.arrow:hover{transform:scale(1.08)}
+.arrow:disabled{opacity:.3;cursor:default;transform:none}
+.thumbs{display:flex;justify-content:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+.thumbs button{width:54px;height:54px;border-radius:12px;overflow:hidden;border:1px solid var(--line);opacity:.5;transition:.25s}
+.thumbs button img{width:100%;height:100%;object-fit:cover}
+.thumbs button[aria-current="true"]{opacity:1;border-color:var(--gold-400);box-shadow:0 0 0 2px var(--gold-400)}
+
+/* ============ 3 BENEFITS ============ */
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,26px)}
+.benefit{text-align:center;padding:clamp(22px,3vw,40px) 18px;border-radius:999px 999px 16px 16px;border:1px solid var(--line);background:rgba(10,42,31,.5)}
+.benefit svg{width:46px;height:46px;stroke:var(--gold-400);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 14px}
+.benefit h3{font-family:var(--f-display);font-size:clamp(20px,1.7vw,26px);color:var(--gold-300)}
+.benefit p{color:var(--cream-dim);font-size:clamp(14px,1.1vw,17px)}
+
+/* ============ 4 OFFER ============ */
+.offer-box{max-width:780px;margin-inline:auto;text-align:center;padding:clamp(28px,5vw,60px) clamp(20px,4vw,60px);border:1px solid var(--gold-500);border-radius:28px;background:linear-gradient(160deg,rgba(22,80,60,.7),rgba(6,27,20,.8));box-shadow:0 30px 80px -30px rgba(0,0,0,.8),inset 0 0 0 6px rgba(236,201,101,.06)}
+.tag{display:inline-block;padding:6px 18px;border-radius:999px;background:rgba(236,201,101,.14);color:var(--gold-300);font-weight:700;font-size:15px}
+.old{margin-top:18px;color:var(--cream-dim);font-size:18px}
+.old s{text-decoration-color:var(--gold-500)}
+.price{font-family:var(--f-latin);font-weight:600;font-size:clamp(84px,13vw,168px);line-height:1;direction:ltr;display:flex;align-items:baseline;justify-content:center;gap:14px}
+.price small{font-family:var(--f-body);font-size:clamp(20px,2vw,28px);font-weight:700;color:var(--gold-300);-webkit-text-fill-color:var(--gold-300)}
+.offer-box .note{margin:8px 0 24px;font-size:16px}
+
+/* ============ 5 REVIEWS ============ */
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,1.6vw,22px)}
+.reviews{max-width:min(1020px,calc((100svh - 370px) / .5625));margin-inline:auto}
+.book-grid>*,.video-grid>*,.order-grid>*{min-width:0}
+.review{position:relative;aspect-ratio:16/9;border-radius:18px;border:1px solid var(--line);overflow:hidden;background:#efede8;box-shadow:0 18px 40px -22px rgba(0,0,0,.8)}
+.review img{width:100%;height:100%;object-fit:contain}
+.review.empty{background:rgba(10,42,31,.6)}
+.review .ph{position:absolute;inset:0;display:none;place-content:center;text-align:center;padding:16px;color:var(--cream-dim);font-size:14px;gap:8px}
+.review .ph b{font-family:var(--f-latin);font-size:44px;color:var(--gold-400);line-height:1}
+.review.empty img{display:none}.review.empty .ph{display:grid}
+
+/* ============ VIDEO ============ */
+.video-grid{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,6vw,96px);align-items:center;justify-content:center}
+.phone{position:relative;justify-self:center;height:min(66svh,640px);aspect-ratio:9/16;border-radius:34px;padding:8px;background:linear-gradient(160deg,#2a2a2a,#0c0c0c);border:1px solid var(--gold-500);box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 8px rgba(236,201,101,.07)}
+.phone video{width:100%;height:100%;object-fit:cover;border-radius:27px;background:#000;display:block}
+.play{position:absolute;inset:8px;border-radius:27px;display:grid;place-items:center;background:linear-gradient(to top,rgba(6,27,20,.65),rgba(6,27,20,.1));transition:opacity .3s}
+.play i{width:84px;height:84px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(236,201,101,.18);animation:pulse 2.2s ease-in-out infinite}
+.play i::before{content:"";border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #1c1503;margin-inline-end:-6px}
+.phone.playing .play{opacity:0;pointer-events:none}
+@keyframes pulse{50%{box-shadow:0 0 0 22px rgba(236,201,101,.05)}}
+.video-text p{font-size:clamp(16px,1.4vw,20px);color:var(--cream);max-width:34em;margin-top:12px}
+.video-text .num{display:inline-block;margin-top:18px;font-family:var(--f-latin);font-size:clamp(30px,3.4vw,48px);font-weight:600;direction:ltr;unicode-bidi:isolate}
+
+/* ============ APPOINTMENT ============ */
+.book-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,72px);align-items:center}
+.steps{list-style:none;counter-reset:st;margin-top:22px;display:grid;gap:14px}
+.steps li{counter-increment:st;display:flex;gap:14px;align-items:center;font-size:clamp(15px,1.2vw,18px)}
+.steps li::before{content:counter(st);flex:0 0 38px;height:38px;border-radius:50%;border:1px solid var(--gold-400);display:grid;place-items:center;font-family:var(--f-latin);font-size:20px;color:var(--gold-300)}
+.book{padding:clamp(18px,2.4vw,30px);border-radius:22px;border:1px solid var(--line);background:rgba(6,27,20,.72)}
+.book h3{font-size:15px;font-weight:700;color:var(--gold-300);margin:0 0 8px}
+.book h3:not(:first-child){margin-top:12px}
+.days{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);border-radius:14px;background:rgba(245,236,217,.05);color:var(--cream);transition:.2s;min-height:44px}
+.chip:hover{border-color:var(--gold-400)}
+.chip[aria-pressed="true"]{background:var(--gold-grad);color:#1c1503;border-color:transparent;font-weight:700}
+.days .chip{flex:1 0 72px;padding:8px 6px;display:grid;line-height:1.25;font-size:13px}
+.days .chip b{font-family:var(--f-latin);font-size:24px;font-weight:600}
+.slots{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.slots .chip{padding:8px 4px;font-size:15px;direction:ltr}
+.modes{display:flex;gap:8px}.modes .chip{flex:1;padding:8px 10px;font-size:15px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.book .field{margin:0}
+.book .btn{width:100%;margin-top:12px}
+.book .pick-err{display:none;color:#ffb4a2;font-size:13px;margin-top:8px}
+.book.bad-pick .pick-err{display:block}
+.book-done{display:none;text-align:center}
+.booked .book-form{display:none}.booked .book-done{display:block}
+.book-done h3{font-family:var(--f-display);font-size:26px}
+.book-done p{margin:8px 0 16px}
+.book-done .summary{text-align:start;font-size:15px;color:var(--cream-dim);border:1px dashed var(--line);border-radius:12px;padding:12px 16px;margin-bottom:18px;white-space:pre-line}
+.book-done button.link{margin-top:14px;font-size:14px;color:var(--cream-dim);text-decoration:underline}
+
+/* ============ 6 ORDER ============ */
+.order-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.order-side ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.order-side li{display:flex;gap:10px;align-items:center;color:var(--cream)}
+.order-side li::before{content:"✦";color:var(--gold-400)}
+.contact{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:6px;font-size:16px}
+.contact a{color:var(--gold-300);direction:ltr;unicode-bidi:isolate;font-weight:500}
+form,.done{padding:clamp(20px,3vw,36px);border-radius:22px;border:1px solid var(--line);background:rgba(6,27,20,.72);backdrop-filter:blur(4px)}
+form h3,.done h3{font-family:var(--f-display);font-size:26px;color:var(--gold-300)}
+form>p{color:var(--cream-dim);font-size:15px;margin-bottom:14px}
+.field{margin-bottom:14px}
+label{display:block;font-weight:500;font-size:15px;margin-bottom:6px}
+input{width:100%;min-height:52px;padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(245,236,217,.06);color:var(--cream);font:inherit;font-size:16px}
+input::placeholder{color:rgba(207,198,176,.55)}
+input:focus{outline:none;border-color:var(--gold-400);box-shadow:0 0 0 3px rgba(236,201,101,.18)}
+.err{display:none;color:#ffb4a2;font-size:13px;margin-top:4px}
+.field.bad input{border-color:#ffb4a2}.field.bad .err{display:block}
+form .btn{width:100%;margin-top:6px}
+.lock{text-align:center;font-size:13px;color:var(--cream-dim);margin-top:12px}
+.done{display:none;text-align:center}
+.done p{margin:8px 0 18px;color:var(--cream)}
+.done .summary{text-align:start;font-size:15px;color:var(--cream-dim);border:1px dashed var(--line);border-radius:12px;padding:12px 16px;margin-bottom:18px;white-space:pre-line}
+.done button.link{margin-top:14px;font-size:14px;color:var(--cream-dim);text-decoration:underline}
+.ordered form{display:none}.ordered .done{display:block}
+
+footer{margin-top:clamp(24px,4vh,44px);padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;font-size:14px;color:var(--cream-dim)}
+footer img{height:40px}
+footer button{text-decoration:underline;color:var(--gold-300)}
+
+/* ============ STICKY BAR ============ */
+.bar{position:fixed;inset:auto 0 0 0;z-index:30;height:var(--bar-h);display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,24px);padding:0 16px;
+  background:rgba(6,27,20,.94);border-top:1px solid var(--line);backdrop-filter:blur(8px);transition:transform .4s}
+.bar.hide{transform:translateY(100%)}
+.bar span{font-weight:700;color:var(--gold-300);font-size:clamp(13px,1.2vw,16px)}
+.bar .btn{min-height:44px;padding:8px 22px;font-size:clamp(14px,1.2vw,16px)}
+
+/* ============ MODAL ============ */
+.modal{position:fixed;inset:0;z-index:60;display:none;place-items:center;padding:20px;background:rgba(3,12,9,.8)}
+.modal.open{display:grid}
+.sheet{max-width:640px;max-height:84svh;overflow:auto;padding:28px;border-radius:20px;background:var(--green-900);border:1px solid var(--line)}
+.sheet h3{font-family:var(--f-display);font-size:26px;color:var(--gold-300);margin-bottom:10px}
+.sheet h4{color:var(--gold-400);margin-top:14px;font-size:16px}
+.sheet p{font-size:15px;color:var(--cream)}
+.sheet .btn{margin-top:20px;min-height:46px}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width:1000px) and (min-height:720px){html{scroll-snap-type:y mandatory}}
+@media (max-width:999px){
+  .hero-grid,.order-grid,.video-grid,.book-grid{grid-template-columns:1fr}
+  .video-text{text-align:center}.video-text .cta{justify-content:center}
+  .phone{order:-1}
+  .hero{text-align:center}.hero .cta{justify-content:center}
+  .arch{order:-1;width:min(74vw,340px)}
+  .seal{width:88px;height:88px;inset-inline-start:-10px}.seal b{font-size:30px}.seal span{font-size:11px}
+  .benefits{grid-template-columns:repeat(2,1fr)}
+  .benefit{padding:20px 10px}.benefit svg{width:36px;height:36px}
+  .dots{display:none}
+  .top img{height:38px}
+}
+@media (max-width:760px){
+  .frame{grid-template-columns:1fr;text-align:center;gap:14px;align-content:start}
+  .shot{height:auto;width:100%;max-height:44svh;justify-self:center}
+  .info{padding:0 6px 8px}
+  .arrow{top:22svh;width:44px;height:44px}
+  .arrow.prev{inset-inline-start:-10px}.arrow.next{inset-inline-end:-10px}
+  .thumbs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:4px 2px 6px;scrollbar-width:none}
+  .thumbs::-webkit-scrollbar{display:none}
+  .thumbs button{flex:0 0 46px;height:46px}
+  /* product cards become a swipeable strip */
+  .products{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:calc(-1 * var(--pad));padding:4px var(--pad) 14px;scrollbar-width:none}
+  .products::-webkit-scrollbar{display:none}
+  .card{flex:0 0 78%;scroll-snap-align:center;flex-direction:column;gap:6px;min-height:190px;padding:22px}
+  .card .n{font-size:46px}
+  .card h3{font-size:22px}.card p{font-size:16px}
+  .swipe-hint{display:block;text-align:center;color:var(--cream-dim);font-size:13px;margin-top:6px}
+  .bar span{display:none}.bar .btn{width:100%;max-width:420px}
+  .btn{width:100%}
+  .reviews{grid-template-columns:1fr;gap:10px;max-width:none}
+  .days{flex-wrap:nowrap;overflow-x:auto;margin-inline:-6px;padding:2px 6px 8px;scrollbar-width:none}
+  .days::-webkit-scrollbar{display:none}
+  .slots{grid-template-columns:repeat(3,1fr)}
+  .row2{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .play i{animation:none}
+  .btn,.card{transition:none}
+}
+</style>
+
+
+
+    <!--
+      Meta Pixel for abou-sandia.vercel.app
+      Pixel ID: 1841287127164615 (the Pixel already linked to your RunItUp23k ad)
+
+      STEP 1: Paste the BASE CODE inside <head> on EVERY page of the site.
+      STEP 2: Add the EVENT lines at the matching moments (see below).
+      STEP 3: Redeploy on Vercel, then test it (see the bottom of this file).
+    -->
+
+    <!-- ===================== STEP 1: BASE CODE (in <head>) ===================== -->
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1841287127164615');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1841287127164615&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+    <!-- ===================== STEP 2: EVENTS ===================== -->
+    <script>
+      // A) When the product / pack page loads (put this on the product page):
+      fbq('track', 'ViewContent', {
+        content_name: 'Pack Rihan Royal - 9 produits',
+        content_type: 'product',
+        value: 1500,
+        currency: 'MAD'
+      });
+
+      // B) When the visitor clicks "Order" / "اطلب الآن", or opens the order form:
+      //    (attach to the button's click handler)
+      function trackStartOrder() {
+        fbq('track', 'InitiateCheckout', { value: 1500, currency: 'MAD' });
+      }
+
+      // C) When the cash-on-delivery order form is SUBMITTED SUCCESSFULLY
+      //    (in the success callback, or on the thank-you page). This is the one
+      //    the campaign optimizes for, so fire it once per real order only.
+      function trackOrderPlaced(orderTotalMAD, orderId) {
+        fbq('track', 'Purchase',
+          { value: orderTotalMAD || 1500, currency: 'MAD' },
+          { eventID: orderId }   // optional: avoids double counting later with CAPI
+        );
+      }
+    </script>
+
+  <!--
+    If the site is Next.js (common on Vercel):
+    - App Router: put the base code in app/layout.tsx with
+      <Script id="meta-pixel" strategy="afterInteractive">...</Script>
+      (from 'next/script'), and the <noscript> img inside <body>.
+    - Call window.fbq('track', 'Purchase', ...) inside the form's onSubmit success handler.
+    - Single-page navigation does not reload the page, so on route change call
+      window.fbq('track', 'PageView').
+
+    ===================== STEP 3: TEST =====================
+    1. Redeploy on Vercel.
+    2. Install the "Meta Pixel Helper" Chrome extension and open abou-sandia.vercel.app.
+      It should show PageView (and ViewContent on the product page) with no errors.
+    3. In Events Manager -> Pixel 1841287127164615 -> "Test events", place one
+      test order. You should see InitiateCheckout and Purchase arrive.
+    4. Tell Claude "pixel is live": it will confirm the events from the Meta side
+      and fix the ad set so the campaign can publish.
+  -->
+
+
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="top">
+  <a href="#home" aria-label="Sandya Elegance"><img src="images/logo.png" alt="Sandya Elegance"></a>
+  <a class="mini" href="#order">اطلبي الآن</a>
+</header>
+
+<nav class="dots" id="dots" aria-label="أقسام الصفحة"></nav>
+
+<main>
+<!-- ============ SLIDE 1: HERO ============ -->
+<section class="slide hero" id="home" data-title="الرئيسية">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal"><span class="latin">Sandya Elegance</span> تقدم</span>
+      <h1 class="gold reveal" style="--i:1">باك الريحان الملكي</h1>
+      <p class="sub reveal" style="--i:2">مجموعة العناية الطبيعية الفاخرة — 9 منتجات مختارة بعناية</p>
+      <p class="sub2 reveal" style="--i:3">من الطبيعة إلى يديكِ، بلمسة مغربية أصيلة</p>
+      <div class="cta reveal" style="--i:4">
+        <a class="btn btn-gold" href="#order">اطلبي الآن — الدفع عند الاستلام</a>
+        <a class="btn btn-ghost" href="#contents">اكتشفي المنتجات</a>
+      </div>
+      <p class="note reveal" style="--i:5">توصيل لجميع مدن المغرب · الدفع عند الاستلام</p>
+    </div>
+    <div class="arch reveal" style="--i:2">
+      <img src="images/hero-pack.jpg" alt="علبة باك الريحان الملكي مفتوحة وبداخلها منتجات Sandya Elegance" width="1024" height="1024">
+      <div class="seal"><b>9</b><span>منتجات<br>طبيعية</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE: VIDEO ============ -->
+<section class="slide alt" id="video" data-title="الفيديو">
+  <div class="wrap video-grid">
+    <div class="phone reveal" id="phone">
+      <video id="promo" src="media/rayhane.mp4" poster="media/rayhane-poster.jpg" playsinline preload="none" controls></video>
+      <button class="play" type="button" id="playBtn" aria-label="تشغيل الفيديو"><i></i></button>
+    </div>
+    <div class="video-text">
+      <span class="eyebrow reveal" style="--i:1">شاهدي الفيديو</span>
+      <h2 class="gold reveal" style="--i:2">تعرّفي على باك الريحان بالصوت والصورة</h2>
+      <p class="reveal" style="--i:3">دقيقة وربع نشرح لكِ فيها الباك ومحتوياته وطريقة الطلب.</p>
+      <a class="num gold reveal" style="--i:4" href="tel:+212627236577">06.27.23.65.77</a>
+      <div class="cta reveal" style="--i:5">
+        <a class="btn btn-gold" href="#order">اطلبي الباك الآن</a>
+        <a class="btn btn-ghost" href="#booking">احجزي موعداً</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE: PRODUCT SLIDER ============ -->
+<section class="slide" id="contents" data-title="محتويات الباك">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow reveal">محتويات الباك</span>
+      <h2 class="gold reveal" style="--i:1">9 منتجات طبيعية فاخرة</h2>
+    </div>
+    <div class="slider reveal" style="--i:2">
+      <button class="arrow prev" type="button" id="pPrev" aria-label="المنتج السابق"></button>
+      <div class="track" id="track" tabindex="0" aria-label="منتجات الباك">
+      <article class="frame" id="p01" aria-label="أعشاب الريحان الطبيعية">
+        <div class="shot"><img src="images/products/product-01.jpg" alt="أعشاب الريحان الطبيعية"  width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">01 / 09</span><h3>أعشاب الريحان الطبيعية</h3><p class="tagline">خلطة طبيعية متعددة الاستعمالات</p><p>خلطة طبيعية للعناية بالبشرة والشعر، تمنح إحساساً بالنظافة والانتعاش.</p></div>
+      </article>
+      <article class="frame" id="p02" aria-label="بخور عسيلة">
+        <div class="shot"><img src="images/products/product-02.jpg" alt="بخور عسيلة" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">02 / 09</span><h3>بخور عسيلة</h3><p class="tagline">رائحة دافئة وعطرية فاخرة تدوم طويلاً</p><p>بخور برائحة مميزة يمنح المكان أجواءً دافئة ويساعد على خلق إحساس بالراحة والهدوء.</p></div>
+      </article>
+      <article class="frame" id="p03" aria-label="كحل الملكة">
+        <div class="shot"><img src="images/products/product-03.jpg" alt="كحل الملكة" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">03 / 09</span><h3>كحل الملكة</h3><p class="tagline">مظهر جذاب وأنيق يدوم طوال اليوم</p><p>كحل يمنح العينين مظهراً جذاباً ولمسة أنيقة، يوضع على رموش العين حسب الرغبة.</p></div>
+      </article>
+      <article class="frame" id="p04" aria-label="كريم الجسم المرطب">
+        <div class="shot"><img src="images/products/product-04.jpg" alt="كريم الجسم المرطب" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">04 / 09</span><h3>كريم الجسم المرطب</h3><p class="tagline">ترطيب وتوحيد لون البشرة وإشراقة طبيعية</p><p>كريم مرطب يساعد على ترطيب البشرة وتوحيد لونها، ويمنحها نعومة وإشراقة طبيعية.</p></div>
+      </article>
+      <article class="frame" id="p05" aria-label="صابونة الريحان للجسم">
+        <div class="shot"><img src="images/products/product-05.jpg" alt="صابونة الريحان للجسم" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">05 / 09</span><h3>صابونة الريحان للجسم</h3><p class="tagline">تنظيف طبيعي وإحساس بالانتعاش</p><p>صابونة طبيعية تساعد على تنظيف البشرة وترطيبها وتمنحها إحساساً بالنعومة.</p></div>
+      </article>
+      <article class="frame" id="p06" aria-label="شامبو الريحان للشعر">
+        <div class="shot"><img src="images/products/product-06.jpg" alt="شامبو الريحان للشعر" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">06 / 09</span><h3>شامبو الريحان للشعر</h3><p class="tagline">شعر صحي نظيف بحيوية طبيعية</p><p>شامبو غني بمكونات تساعد على تنظيف الشعر وفروة الرأس ومنح الشعر مظهراً صحياً.</p></div>
+      </article>
+      <article class="frame" id="p07" aria-label="غسول الريحان الحميمي">
+        <div class="shot"><img src="images/products/product-07.jpg" alt="غسول الريحان الحميمي" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">07 / 09</span><h3>غسول الريحان الحميمي</h3><p class="tagline">لطيف خالٍ من السلفات، للتنظيف اليومي</p><p>غسول لطيف بتركيبة متوازنة للتنظيف اليومي ومنح إحساس بالانتعاش والنظافة.</p></div>
+      </article>
+      <article class="frame" id="p08" aria-label="صابونة الريحان للمناطق الحساسة">
+        <div class="shot"><img src="images/products/product-08.jpg" alt="صابونة الريحان للمناطق الحساسة" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">08 / 09</span><h3>صابونة الريحان للمناطق الحساسة</h3><p class="tagline">عناية يومية لطيفة وآمنة</p><p>صابونة لطيفة مخصصة للعناية اليومية، تساعد على النظافة والانتعاش بلطف.</p></div>
+      </article>
+      <article class="frame" id="p09" aria-label="مصل الريحان بالعسل">
+        <div class="shot"><img src="images/products/product-09.jpg" alt="مصل الريحان بالعسل" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">09 / 09</span><h3>مصل الريحان بالعسل</h3><p class="tagline">ترطيب ولمعان طبيعي للشعر</p><p>مصل مرطب يساعد على تنعيم الشعر وتقليل الجفاف والتقصف مع لمسة لمعان طبيعية.</p></div>
+      </article>
+      <article class="frame" id="p10" aria-label="علبة الهدية الفاخرة">
+        <div class="shot"><img src="images/products/product-10.jpg" alt="علبة الهدية الفاخرة" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">مع الباك</span><h3>علبة الهدية الفاخرة</h3><p class="tagline">تغليف فاخر، هدية جاهزة للتقديم</p><p>المنتجات التسعة مرتبة داخل علبة أنيقة بالأخضر والذهبي.</p></div>
+      </article>
+      <article class="frame" id="p11" aria-label="دليل مكونات الباك">
+        <div class="shot wide"><img src="images/products/product-11.jpg" alt="دليل مكونات الباك" loading="lazy" width="1000" height="1000"></div>
+        <div class="info"><span class="count latin gold" dir="ltr">مع الباك</span><h3>دليل مكونات الباك</h3><p class="tagline">شرح كل منتج وطريقة استعماله</p><p>دليل داخل العلبة يشرح لكِ كل منتج وكيفية استعماله.</p></div>
+      </article>
+      </div>
+      <button class="arrow next" type="button" id="pNext" aria-label="المنتج التالي"></button>
+    </div>
+    <div class="thumbs reveal" id="thumbs" style="--i:3"><button type="button" aria-label="أعشاب الريحان الطبيعية"><img src="images/products/thumb-01.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="بخور عسيلة"><img src="images/products/thumb-02.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="كحل الملكة"><img src="images/products/thumb-03.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="كريم الجسم المرطب"><img src="images/products/thumb-04.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="صابونة الريحان للجسم"><img src="images/products/thumb-05.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="شامبو الريحان للشعر"><img src="images/products/thumb-06.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="غسول الريحان الحميمي"><img src="images/products/thumb-07.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="صابونة الريحان للمناطق الحساسة"><img src="images/products/thumb-08.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="مصل الريحان بالعسل"><img src="images/products/thumb-09.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="علبة الهدية الفاخرة"><img src="images/products/thumb-10.jpg" alt="" width="160" height="160"></button><button type="button" aria-label="دليل مكونات الباك"><img src="images/products/thumb-11.jpg" alt="" width="160" height="160"></button></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 3: BENEFITS ============ -->
+<section class="slide alt" id="benefits" data-title="لماذا الباك">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow reveal">لماذا باك الريحان</span>
+      <h2 class="gold reveal" style="--i:1">عناية ملكية تصلكِ إلى باب بيتكِ</h2>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal" style="--i:1"><svg viewBox="0 0 48 48"><path d="M4 14h24v20H4zM28 20h9l7 8v6H28M12 39a4 4 0 100-8 4 4 0 000 8zM36 39a4 4 0 100-8 4 4 0 000 8z"/></svg><h3>توصيل سريع</h3><p>لجميع مدن المغرب</p></div>
+      <div class="benefit reveal" style="--i:2"><svg viewBox="0 0 48 48"><rect x="5" y="12" width="38" height="24" rx="3"/><circle cx="24" cy="24" r="6"/><path d="M11 18v0M37 30v0"/></svg><h3>الدفع عند الاستلام</h3><p>ادفعي بعد ما تستلمي</p></div>
+      <div class="benefit reveal" style="--i:3"><svg viewBox="0 0 48 48"><path d="M40 8C20 8 9 18 9 31c0 3 1 6 2 8 14 1 29-7 29-31zM9 42c4-12 11-19 20-24"/></svg><h3>منتجات طبيعية 100%</h3><p>بدون مواد ضارة</p></div>
+      <div class="benefit reveal" style="--i:4"><svg viewBox="0 0 48 48"><path d="M6 18h36v8H6zM9 26h30v16H9zM24 18v24M24 18c-4-10-14-8-11-2 2 3 7 2 11 2zm0 0c4-10 14-8 11-2-2 3-7 2-11 2z"/></svg><h3>تغليف فاخر</h3><p>هدية جاهزة للتقديم</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 4: OFFER ============ -->
+<section class="slide" id="offer" data-title="العرض">
+  <div class="wrap">
+    <div class="offer-box">
+      <span class="eyebrow reveal">عرض حصري</span>
+      <h2 class="gold reveal" style="--i:1">سعر استثنائي لفترة محدودة</h2>
+      <p class="reveal" style="--i:2;margin-top:14px"><span class="tag">وفري 25% — عرض لفترة محدودة</span></p>
+      <p class="old reveal" style="--i:3">السعر الأصلي <s>2000 درهم</s> · سعركِ اليوم</p>
+      <p class="price gold reveal" style="--i:4">1500 <small>درهم</small></p>
+      <p class="note reveal" style="--i:5">الدفع عند الاستلام · التوصيل مجاني للطلبات الأولى</p>
+      <a class="btn btn-gold reveal" style="--i:6" href="#order">اطلبي الآن بـ 1500 درهم</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 5: REVIEWS ============ -->
+<section class="slide alt" id="reviews" data-title="آراء العملاء">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow reveal">آراء العملاء</span>
+      <h2 class="gold reveal" style="--i:1">ثقة زبوناتنا من كل المغرب</h2>
+    </div>
+    <div class="reviews">
+      <figure class="review reveal" style="--i:1"><img src="images/reviews/1.jpeg" alt="رسالة زبونة عن شامبو الريحان" loading="lazy"><div class="ph"><b>1</b>صورة الرأي الأول</div></figure>
+      <figure class="review reveal" style="--i:2"><img src="images/reviews/2.jpeg" alt="رسالة زبونة عن كحل الملكة" loading="lazy"><div class="ph"><b>2</b>صورة الرأي الثاني</div></figure>
+      <figure class="review reveal" style="--i:3"><img src="images/reviews/3.jpeg" alt="رسالة زبونة عن الغسول الحميمي وكريم الجسم" loading="lazy"><div class="ph"><b>3</b>صورة الرأي الثالث</div></figure>
+      <figure class="review reveal" style="--i:4"><img src="images/reviews/4.jpeg" alt="رسالة زبونة عن البخور وصابونة المناطق الحساسة" loading="lazy"><div class="ph"><b>4</b>صورة الرأي الرابع</div></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE: APPOINTMENT ============ -->
+<section class="slide" id="booking" data-title="حجز موعد">
+  <div class="wrap book-grid" id="bookGrid">
+    <div>
+      <span class="eyebrow reveal">خدمة المواعيد</span>
+      <h2 class="gold reveal" style="--i:1">احجزي موعد استشارتكِ</h2>
+      <p class="reveal" style="--i:2;margin-top:10px;color:var(--cream)">اختاري اليوم والوقت المناسبين لكِ، وسنتواصل معكِ لتأكيد الموعد.</p>
+      <ol class="steps reveal" style="--i:3">
+        <li>اختاري اليوم</li>
+        <li>اختاري الساعة وطريقة التواصل</li>
+        <li>أرسلي الطلب عبر واتساب وانتظري التأكيد</li>
+      </ol>
+    </div>
+    <div class="book reveal" id="book" style="--i:2">
+      <form class="book-form" id="bookForm" novalidate>
+        <h3>اليوم</h3>
+        <div class="days" id="days" role="group" aria-label="اختيار اليوم"></div>
+        <h3>الساعة</h3>
+        <div class="slots" id="slots" role="group" aria-label="اختيار الساعة"></div>
+        <h3>طريقة التواصل</h3>
+        <div class="modes" id="modes" role="group" aria-label="طريقة التواصل">
+          <button type="button" class="chip" aria-pressed="true" data-v="مكالمة هاتفية">مكالمة هاتفية</button>
+          <button type="button" class="chip" aria-pressed="false" data-v="واتساب">واتساب</button>
+        </div>
+        <h3>بياناتكِ</h3>
+        <div class="row2">
+          <div class="field"><input id="bName" autocomplete="name" placeholder="الاسم الكامل" aria-label="الاسم الكامل"><span class="err">يرجى إدخال الاسم</span></div>
+          <div class="field"><input id="bPhone" type="tel" inputmode="numeric" autocomplete="tel" dir="ltr" placeholder="06XXXXXXXX" aria-label="رقم الهاتف"><span class="err">رقم مغربي صحيح (06/07)</span></div>
+        </div>
+        <p class="pick-err">يرجى اختيار اليوم والساعة</p>
+        <button class="btn btn-gold" type="submit">تأكيد طلب الموعد</button>
+      </form>
+      <div class="book-done" aria-live="polite">
+        <h3 class="gold">خطوة أخيرة</h3>
+        <p>أرسلي طلب الموعد عبر واتساب. الموعد يصبح مؤكداً بعد ردّنا عليكِ.</p>
+        <div class="summary" id="bookSummary"></div>
+        <a class="btn btn-gold" id="bookWa" href="#" target="_blank" rel="noopener">إرسال الطلب عبر واتساب</a>
+        <br><button class="link" type="button" id="editBook">تعديل الموعد</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 6: ORDER + FOOTER ============ -->
+<section class="slide alt" id="order" data-title="اطلبي الآن">
+  <div class="wrap">
+    <div class="order-grid" id="orderGrid">
+      <div class="order-side">
+        <span class="eyebrow reveal">اطلبي الآن</span>
+        <h2 class="gold reveal" style="--i:1">أكملي طلبك في دقيقة واحدة</h2>
+        <ul class="reveal" style="--i:2">
+          <li>باك الريحان الملكي — 9 منتجات</li>
+          <li>1500 درهم بدل 2000 درهم</li>
+          <li>الدفع عند الاستلام</li>
+        </ul>
+        <div class="contact reveal" style="--i:3">
+          <span>للتواصل معنا مباشرة:</span>
+          <a href="tel:+212627236577">+212 627 236 577</a>
+          <a href="mailto:ayoubabousandia@gmail.com">ayoubabousandia@gmail.com</a>
+        </div>
+      </div>
+      <div class="reveal" style="--i:2">
+        <form id="orderForm" novalidate>
+          <h3>بيانات الطلب</h3>
+          <p>أدخلي بياناتك وسنتواصل معكِ في أقرب وقت</p>
+          <div class="field"><label for="fName">الاسم الكامل</label><input id="fName" name="name" autocomplete="name" placeholder="مثال: فاطمة الزهراء"><span class="err">يرجى إدخال الاسم الكامل</span></div>
+          <div class="field"><label for="fCity">المدينة / العنوان</label><input id="fCity" name="city" autocomplete="street-address" placeholder="مثال: الدار البيضاء، حي المعاريف"><span class="err">يرجى إدخال العنوان</span></div>
+          <div class="field"><label for="fPhone">رقم الهاتف (06 / 07)</label><input id="fPhone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" dir="ltr" placeholder="06XXXXXXXX"><span class="err">يرجى إدخال رقم هاتف مغربي صحيح (06/07)</span></div>
+          <button class="btn btn-gold" type="submit">تأكيد الطلب — الدفع عند الاستلام</button>
+          <p class="lock">بياناتك محمية — لن تُستخدم إلا للتواصل بشأن طلبك</p>
+        </form>
+        <div class="done" id="done" aria-live="polite">
+          <h3>خطوة أخيرة</h3>
+          <p>أرسلي طلبكِ عبر واتساب ليصلنا مباشرة، وسنتواصل معكِ لتأكيد التوصيل.</p>
+          <div class="summary" id="summary"></div>
+          <a class="btn btn-gold" id="waLink" href="#" target="_blank" rel="noopener">إرسال الطلب عبر واتساب</a>
+          <br><button class="link" type="button" id="editOrder">تعديل البيانات</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <img src="images/logo.png" alt="Sandya Elegance">
+      <span><span class="latin">© 2026 Sandya Elegance — Perfectly Elegant</span></span>
+      <button type="button" id="openPrivacy">سياسة الخصوصية</button>
+    </footer>
+  </div>
+</section>
+</main>
+
+<div class="bar" id="bar">
+  <span>عرض محدود −25%</span>
+  <a class="btn btn-gold" href="#order">اطلبي الآن — 1500 درهم</a>
+</div>
+
+<!-- ============ PRIVACY MODAL ============ -->
+<div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="pvTitle">
+  <div class="sheet">
+    <h3 id="pvTitle">سياسة الخصوصية</h3>
+    <p>نحترم خصوصيتكِ ونلتزم بحماية بياناتكِ الشخصية وفق القانون المغربي 09-08 المتعلق بحماية الأشخاص الذاتيين تجاه معالجة المعطيات ذات الطابع الشخصي.</p>
+    <h4>البيانات التي نجمعها</h4>
+    <p>الاسم الكامل، رقم الهاتف، المدينة والعنوان، وتفاصيل الطلب.</p>
+    <h4>لماذا نستعملها</h4>
+    <p>لتأكيد الطلب، تنظيم التوصيل، والتواصل معكِ بخصوص طلبكِ فقط.</p>
+    <h4>من يطّلع عليها</h4>
+    <p>فريق Sandya Elegance وشركة التوصيل المكلفة بإيصال طلبكِ. لا نبيع بياناتكِ ولا نشاركها مع أي طرف آخر.</p>
+    <h4>حقوقكِ</h4>
+    <p>يمكنكِ طلب الاطلاع على بياناتكِ أو تصحيحها أو حذفها عبر الهاتف <span dir="ltr">+212 627 236 577</span> أو البريد <span dir="ltr">ayoubabousandia@gmail.com</span>.</p>
+    <button class="btn btn-ghost" type="button" id="closePrivacy">إغلاق</button>
+  </div>
+</div>
+
+<script>
+/* ============ SLIDE NAV ============ */
+const slides=[...document.querySelectorAll('.slide')];
+const dots=document.getElementById('dots'), bar=document.getElementById('bar'), progress=document.getElementById('progress');
+slides.forEach((s,i)=>{
+  const b=document.createElement('button');
+  b.type='button'; b.setAttribute('aria-label',s.dataset.title);
+  b.addEventListener('click',()=>s.scrollIntoView({behavior:'smooth'}));
+  dots.appendChild(b);
+});
+let current=0;
+const setCurrent=i=>{
+  current=i;
+  [...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i));
+  bar.classList.toggle('hide',['order','booking'].includes(slides[i].id));
+};
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('visible');}
+}),{threshold:.18});
+const ioCur=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting) setCurrent(slides.indexOf(e.target));
+}),{rootMargin:'-50% 0px -50% 0px'});
+slides.forEach(s=>{io.observe(s);ioCur.observe(s);});
+setCurrent(0);
+
+addEventListener('scroll',()=>{
+  const max=document.documentElement.scrollHeight-innerHeight;
+  progress.style.transform='scaleX('+(max>0?scrollY/max:0)+')';
+},{passive:true});
+
+addEventListener('keydown',e=>{
+  if(e.target.matches('input,textarea')||document.getElementById('privacy').classList.contains('open')) return;
+  let t=null;
+  if(['ArrowDown','PageDown'].includes(e.key)) t=Math.min(current+1,slides.length-1);
+  if(['ArrowUp','PageUp'].includes(e.key)) t=Math.max(current-1,0);
+  if(t!==null){e.preventDefault();slides[t].scrollIntoView({behavior:'smooth'});}
+});
+
+/* ============ REVIEW IMAGE FALLBACK ============ */
+document.querySelectorAll('.review img').forEach(img=>{
+  const miss=()=>img.parentElement.classList.add('empty');
+  img.addEventListener('error',miss);
+  if(img.complete&&img.naturalWidth===0&&img.currentSrc) miss();
+});
+
+/* ============ ORDER FORM -> WHATSAPP ============ */
+const WHATSAPP='212627236577';
+const form=document.getElementById('orderForm'), grid=document.getElementById('orderGrid');
+const f={name:fName,city:fCity,phone:fPhone};
+const valid={
+  name:v=>v.trim().length>=3,
+  city:v=>v.trim().length>=3,
+  phone:v=>/^0[67]\d{8}$/.test(v.replace(/[\s.-]/g,''))
+};
+Object.keys(f).forEach(k=>f[k].addEventListener('input',()=>f[k].closest('.field').classList.remove('bad')));
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  let ok=true, first=null;
+  Object.keys(f).forEach(k=>{
+    const good=valid[k](f[k].value);
+    f[k].closest('.field').classList.toggle('bad',!good);
+    if(!good){ok=false; first=first||f[k];}
+  });
+  if(!ok){first.focus();return;}
+  const text='طلب جديد: باك الريحان الملكي (1500 درهم)\nالاسم: '+f.name.value.trim()+'\nالمدينة / العنوان: '+f.city.value.trim()+'\nالهاتف: '+f.phone.value.trim()+'\nالدفع عند الاستلام';
+  document.getElementById('summary').textContent=text;
+  document.getElementById('waLink').href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text);
+  grid.classList.add('ordered');
+});
+document.getElementById('editOrder').addEventListener('click',()=>grid.classList.remove('ordered'));
+
+/* ============ PRODUCT SLIDER ============ */
+const track=document.getElementById('track'), frames=[...track.children], thumbs=[...document.getElementById('thumbs').children];
+const pPrev=document.getElementById('pPrev'), pNext=document.getElementById('pNext');
+let pIdx=0;
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const goTo=i=>{ i=Math.max(0,Math.min(frames.length-1,i)); track.scrollTo({left:frames[i].offsetLeft-frames[0].offsetLeft,behavior:reduce?'auto':'smooth'}); };
+const setP=i=>{ pIdx=i; thumbs.forEach((t,k)=>t.setAttribute('aria-current',k===i)); pPrev.disabled=i===0; pNext.disabled=i===frames.length-1;
+  const t=thumbs[i], box=t.parentElement; if(box.scrollWidth>box.clientWidth) box.scrollTo({left:t.offsetLeft-box.clientWidth/2+t.clientWidth/2,behavior:'smooth'}); };
+const pio=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) setP(frames.indexOf(e.target)); }),{root:track,threshold:.6});
+frames.forEach(f=>pio.observe(f));
+pPrev.addEventListener('click',()=>goTo(pIdx-1));
+pNext.addEventListener('click',()=>goTo(pIdx+1));
+thumbs.forEach((t,i)=>t.addEventListener('click',()=>goTo(i)));
+track.addEventListener('keydown',e=>{ if(e.key==='ArrowLeft'){e.preventDefault();goTo(pIdx+1);} if(e.key==='ArrowRight'){e.preventDefault();goTo(pIdx-1);} });
+setP(0);
+
+/* ============ VIDEO ============ */
+const promo=document.getElementById('promo'), phone=document.getElementById('phone');
+document.getElementById('playBtn').addEventListener('click',()=>{const r=promo.play(); if(r&&r.catch) r.catch(()=>{});});
+promo.addEventListener('play',()=>phone.classList.add('playing'));
+promo.addEventListener('pause',()=>{ if(!promo.seeking) phone.classList.remove('playing'); });
+new IntersectionObserver(es=>es.forEach(e=>{ if(!e.isIntersecting&&!promo.paused) promo.pause(); }),{threshold:.2}).observe(phone);
+
+/* ============ APPOINTMENT -> WHATSAPP ============ */
+const daysEl=document.getElementById('days'), slotsEl=document.getElementById('slots'), modesEl=document.getElementById('modes'), book=document.getElementById('book');
+const dayNames=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const monthNames=['يناير','فبراير','مارس','أبريل','ماي','يونيو','يوليوز','غشت','شتنبر','أكتوبر','نونبر','دجنبر'];
+const pick={day:null,slot:null,mode:'مكالمة هاتفية'};
+for(let i=1;i<=7;i++){
+  const d=new Date(); d.setDate(d.getDate()+i);
+  const b=document.createElement('button'); b.type='button'; b.className='chip'; b.setAttribute('aria-pressed','false');
+  b.dataset.v=dayNames[d.getDay()]+' '+d.getDate()+' '+monthNames[d.getMonth()];
+  b.innerHTML='<span>'+dayNames[d.getDay()]+'</span><b>'+d.getDate()+'</b><span>'+monthNames[d.getMonth()]+'</span>';
+  daysEl.appendChild(b);
+}
+['10:00','11:00','12:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00'].forEach(t=>{
+  const b=document.createElement('button'); b.type='button'; b.className='chip'; b.setAttribute('aria-pressed','false'); b.dataset.v=t; b.textContent=t; slotsEl.appendChild(b);
+});
+const group=(el,key)=>el.addEventListener('click',e=>{
+  const b=e.target.closest('.chip'); if(!b) return;
+  el.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+  pick[key]=b.dataset.v; book.classList.remove('bad-pick');
+});
+group(daysEl,'day'); group(slotsEl,'slot'); group(modesEl,'mode');
+[bName,bPhone].forEach(i=>i.addEventListener('input',()=>i.closest('.field').classList.remove('bad')));
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const okN=valid.name(bName.value), okP=valid.phone(bPhone.value), okPick=pick.day&&pick.slot;
+  bName.closest('.field').classList.toggle('bad',!okN);
+  bPhone.closest('.field').classList.toggle('bad',!okP);
+  book.classList.toggle('bad-pick',!okPick);
+  if(!okPick) return;
+  if(!okN){bName.focus();return;} if(!okP){bPhone.focus();return;}
+  const text='طلب موعد استشارة\nاليوم: '+pick.day+'\nالساعة: '+pick.slot+'\nطريقة التواصل: '+pick.mode+'\nالاسم: '+bName.value.trim()+'\nالهاتف: '+bPhone.value.trim();
+  document.getElementById('bookSummary').textContent=text;
+  document.getElementById('bookWa').href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text);
+  book.classList.add('booked');
+});
+document.getElementById('editBook').addEventListener('click',()=>book.classList.remove('booked'));
+
+/* ============ PRIVACY MODAL ============ */
+const pv=document.getElementById('privacy');
+document.getElementById('openPrivacy').addEventListener('click',()=>{pv.classList.add('open');document.getElementById('closePrivacy').focus();});
+document.getElementById('closePrivacy').addEventListener('click',()=>pv.classList.remove('open'));
+pv.addEventListener('click',e=>{if(e.target===pv)pv.classList.remove('open');});
+addEventListener('keydown',e=>{if(e.key==='Escape')pv.classList.remove('open');});
+</script>
+</body>
+</html>
